@@ -24,22 +24,13 @@ async function fetchCharacters() {
   const data = await response.json();
   const characterData = data.results;
   cardContainer.innerHTML = "";
+  //mapen der characterData aus den fetch daten und direkte anwendung der CharacterCard fonction auf die einzelnen Objekte:
   characterData
     .map(CharacterCard)
-    /* .map((character) => {
-      CharacterCard(character);
-    }) */
+    //für jede CharacterCard wird eine .forEach methode angewandt um diese an den cardContainer angehängt:
     .forEach((card) => {
       cardContainer.append(card);
     });
-
-  /* return characterData; */
-
-  /*   characterData.results.forEach((character) => {
-    const cardElement = CharacterCard(character);
-    cardContainer.innerHTML = "";
-    cardContainer.append(cardElement);
-  }); */
 }
 
 fetchCharacters();
