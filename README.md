@@ -91,7 +91,7 @@ their name into the search bar.
 - Update the state variable `searchQuery` with the current text inside the search bar every time
   this event is triggered.
 - Modify the fetch URL again by adding another url encoded attribute `name`: append
-  `&name=<searchQuery>` to the url. If the search query is an empty string, it will be ignored by
+  `&name=<searchQuery>` to the url. If the search querys is an empty string, it will be ignored by
   the API, so don't worry about that.
 - Now trigger the function `fetchCharacters` whenever a submit event happens.
 
@@ -129,5 +129,3 @@ Run `npm run start` to start a development server and open [localhost:3000](http
 > Select the HTML file you want to view, press <kbd>⇧</kbd><kbd>⌘</kbd><kbd>P</kbd>, search for `Live Preview: Show Preview` and confirm with <kbd>Enter</kbd>.
 
 Use `npm run test` to run the tests.
-
-
